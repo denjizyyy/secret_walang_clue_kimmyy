@@ -1,0 +1,76 @@
+<DOCTYPE html>
+<html>
+<style type="text/css">
+p{
+   color: black;
+   font-size: 10px;
+   display: block;
+   position: absolute;
+   margin-right: 100px;
+   }
+.app{
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   }
+   img{
+   height: 30%;
+   width: 200px;
+   margin-top: 100px;
+   margin-right: 250px;
+   }
+   input{
+   position: absolute;
+   cursor: cursor;
+   display: flex;
+   margin: 350px 50px;
+   padding:10px 30px;
+   background-color: lightgreen;
+   }
+   .yesbtn{
+   left: 200px;
+   }
+    button{
+       position: absolute;
+       display:flex;
+       cursor: cursor;
+       margin: 350px 100px;
+       padding:10px 30px;
+       background-color: red;
+       }
+    
+       
+       
+</style>
+<body>
+  <div class="app">
+  <p id="question">Julia, can I court you again?</p>
+  <img src="https://media.tenor.com/7NOP4gAqMuIAAAAC/eru-chitanda-hyouka.gif">
+  <input type="button" class="yesbtn" id="yes" value="YES"  ></input>  
+  <button id="no" class="nobtn">NO</button>
+  
+  </div> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</body>
+
+<script type="text/javascript">
+
+
+var noBtn = document.getElementById('no');
+var yesBtn= document.getElementById('yes');
+var ques= document.getElementById('question');
+
+noBtn.addEventListener("click", function() {
+  var changeTop = (Math.random() * ($(window).height() - $("button").height()));
+  var changeLeft = (Math.random() * ($(window).width() - $("button").width()));
+  $("button").css("margin-top", changeTop + "px");
+  $("button").css("margin-left", changeLeft + "px");
+})
+
+yesBtn.addEventListener("click",function(){
+ques.innerHTML="nag iisip 'ko beh kung paano 'ko mag coconfess uli sa'yo kung through letter ba or something else. kaya napag decide ko ay gumawa nlng nang website para unique hahahaha gurabi coderist nmn pala eme. uhm for the past month beh is inassess ko ang aking emotion para malaman ang tunay kong nararamdaman, so ayon the answer is I do really have a genuinely feelings for you, and along those days I also improve myself not just to please you. I also do it for myself kasi alam ko sa sarili ko ay sobrang mahiyain kong tao at ala 'ko masyado confidence kaya nagiging pabebe 'ko kumilos. pero I can finally say nakuha kona ang confidrnce na 'yon na ilalabas konarin ang kulit ko sa iba hehe. I also improve my self to properly express my feelings sa'yo at mawala ang tlaga ang aking hiya. uhm kaya I will shoot my shot again, Julia crush kita at gusto kita ligawan also to be someone you can rely on when things go harder. and to show the version of me who finally got a confidence. 'yun lng beh take your time."
+})
+</script>
+</html>
